@@ -2,22 +2,20 @@ function mincost(arr)
 { 
 //write your code here
 // return the min cost
-	let sum = 0;
 	arr.sort();
-	let res = arr.map((currEle)=> {
-		sum = sum+currEle;
-		return sum;
-		
-		
-	})
-	let ans = 0;
-	res.forEach( (currEle, index) => {
-		if(index>0){
-			ans += currEle;
-		}
-	});
-
-	return ans;
+let res = [];
+let sum = arr[0];
+arr.map((currEle,index) => {
+  if(index>=1){
+  sum+=currEle;
+  res.push(sum);
+  }
+})
+let ans = 0 ;
+res.forEach((currEle) => {
+  ans += currEle;
+})
+return ans;
   
 }
 
