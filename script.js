@@ -17,7 +17,7 @@ function mincost(arr)
 		}
 	});
 
-	console.log(ans);
+	return ans;
   
 }
 
